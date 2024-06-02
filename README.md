@@ -1,1 +1,2 @@
-Shows a problem with raising a change in the underlaying model of TreeDataGrid. Only difference between the grids is another int text column.
+Shows a problem with raising a change in the underlaying model of TreeDataGrid. Only difference between the two TreeDataGrids is another int text column in the HierarchicalTreeDataGridSource, the model is the same.
+The Folder is updating its size when the items are moved, so it raises a PropertyChanged when the collection changes. This is also executed, but from the left grid only every second time the getter of the size is called. 
