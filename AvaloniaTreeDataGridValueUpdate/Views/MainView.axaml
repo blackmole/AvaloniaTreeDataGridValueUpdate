@@ -1,0 +1,25 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaTreeDataGridValueUpdate.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="320"
+             x:Class="AvaloniaTreeDataGridValueUpdate.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+  <StackPanel Orientation="Horizontal">
+	  <StackPanel Orientation="Vertical" Margin="20" >
+        <TextBlock Text="Updating size every second raise" />
+        <TreeDataGrid Name="ItemGrid" Source="{Binding Items}" AutoDragDropRows="True" />
+      </StackPanel>
+	  <StackPanel Orientation="Vertical" Margin="20" >
+        <TextBlock Text="Updating size most of the time" />
+        <TreeDataGrid Name="ItemGrid2" Source="{Binding Items2}" AutoDragDropRows="True" />
+      </StackPanel>
+  </StackPanel>
+</UserControl>
